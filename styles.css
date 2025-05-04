@@ -169,9 +169,8 @@ a{
   color: #666;
 }
 
-.presentacion{
-  width: 30%;
-  height: 30%;
+.presentacion img{
+ width: 20%;
 }
 
 .card{
