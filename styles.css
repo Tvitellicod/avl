@@ -245,6 +245,10 @@ a:visited {
   object-fit: contain;
 }
 
+.titulo-info{
+  background-color: #f0f0f0;
+}
+
 /* ----------------------------- */
 /* SECCIÓN DE CONTACTO */
 /* ----------------------------- */
