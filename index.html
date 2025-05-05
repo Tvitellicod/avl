@@ -23,14 +23,66 @@
     </nav>
 
     <main>
+        <a href="pages/Actividades.html" id="ini-a"><div class="presentacion-actividades">
+            <h2 id="acti-h">Nuestras Actividades</h2>
 
-        <section class="presentacion">
-            <div class="card">
-                <img src="img/Gimnasio TKD/IMG_8143.JPG" alt="taekwondo">
-                <p>Taekwondo</p>
-            </div>
-            
-        </section>
+            <section class="slideshow-row">
+                <div class="slideshow">
+                <div class="slide"><img src="img/Basquet-actividad/IMG-20250308-WA0002.jpg" alt="1"></div>
+                <div class="slide"><img src="img/Escuelitadefutbol-actividad/IMG-20250310-WA0020.jpg" alt="2"></div>
+                <div class="slide"><img src="img/Gimnasiaartistica-actividad/IMG-20250305-WA0032.jpg" alt="3"></div>
+                <div class="slide"><img src="img/pileta-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.29_a33f9523.jpg" alt="3"></div>
+                
+                </div>
+                <div class="slideshow">
+                <div class="slide"><img src="img/Basquet-actividad/IMG-20250308-WA0012.jpg" alt="4"></div>
+                <div class="slide"><img src="img/Escuelitadefutbol-actividad/IMG-20250310-WA0021.jpg" alt="5"></div>
+                <div class="slide"><img src="img/Gimnasiaartistica-actividad/IMG-20250305-WA0031.jpg" alt="6"></div>
+                <div class="slide"><img src="img/pileta-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.28_8d7d840f.jpg" alt="3"></div>
+
+                </div>
+                <div class="slideshow">
+                <div class="slide"><img src="img/Basquet-actividad/IMG-20250308-WA0006.jpg" alt="7"></div>
+                <div class="slide"><img src="img/Escuelitadefutbol-actividad/IMG-20250310-WA0023.jpg" alt="8"></div>
+                <div class="slide"><img src="img/Gimnasiaartistica-actividad/IMG-20250305-WA0030.jpg" alt="9"></div>
+                <div class="slide"><img src="img/pileta-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.28_ae523fa6.jpg" alt="3"></div>
+                </div>
+                <div class="slideshow">
+                <div class="slide"><img src="img/Basquet-actividad/IMG-20250308-WA0008.jpg" alt="10"></div>
+                <div class="slide"><img src="img/Escuelitadefutbol-actividad/IMG-20250310-WA0024.jpg" alt="11"></div>
+                <div class="slide"><img src="img/Gimnasiaartistica-actividad/IMG-20250305-WA0029.jpg" alt="12"></div>
+                <div class="slide"><img src="img/pileta-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.29_020fce34.jpg" alt="3"></div>
+                </div>
+                
+            </section>
+            <section class="slideshow-row">
+                <div class="slideshow">
+                <div class="slide"><img src="img/Patinartistico-actividad/20241215_200921.jpg"alt="1"></div>
+                <div class="slide"><img src="img/Voley-actividad/IMG-20250403-WA0010.jpg" alt="3"></div>
+                <div class="slide"><img src="img/Tkd-actividad/20250322_121904.jpg" alt="2"></div>
+                <div class="slide"><img src="img/Futbolinfantil-actividad/20250308_151549.jpg" alt="8"></div>
+                </div>
+                <div class="slideshow">
+                <div class="slide"><img src="img/Patinartistico-actividad/DSC_0242.JPG" alt="4"></div>
+                <div class="slide"><img src="img/Voley-actividad/IMG-20250403-WA0008.jpg" alt="6"></div>
+                <div class="slide"><img src="img/Tkd-actividad/20250326_181441.jpg" alt="5"></div>
+                <div class="slide"><img src="img/Futbolinfantil-actividad/IMG-20250305-WA0056.jpg" alt="8"></div>
+                </div>
+                <div class="slideshow">
+                <div class="slide"><img src="img/Patinartistico-actividad/DSC_0256.JPG" alt="7"></div>
+                <div class="slide"><img src="img/Voley-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.29_d402bc14.jpg" alt="9"></div>
+                <div class="slide"><img src="img/Tkd-actividad/" alt="8"></div>
+                <div class="slide"><img src="img/Futbolinfantil-actividad/IMG-20250305-WA0052.jpg" alt="8"></div>
+                </div>
+                <div class="slideshow">
+                <div class="slide"><img src="img/Patinartistico-actividad/DSCPDC_0001_BURST20181216222541321.JPG" alt="10"></div>
+                <div class="slide"><img src="img/Voley-actividad/IMG-20250403-WA0007.jpg" alt="12"></div>
+                <div class="slide"><img src="img/Escuelitadefutbol/IMG-20250310-WA0023.jpg" alt="11"></div>
+                <div class="slide"><img src="img/Futbolinfantil-actividad/IMG-20250305-WA0055.jpg" alt="8"></div>
+                </div>
+            </section>
+        </div></a>
+
 
         <a href="pages/Actividades.html">
             <section class="sect-act">
@@ -83,5 +135,14 @@
             </div>
         </section>
 </footer>
+<script>
+    document.querySelectorAll('.slideshow').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        slide.style.animationDelay = `${index * 5}s`;
+      });
+    });
+  </script>
+  
 </body>
 </html>
