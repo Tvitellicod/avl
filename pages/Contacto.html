@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amigos de Villa Luro</title>
-    <link rel="stylesheet" href="styles.css ">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" href="../img/Escudos/Escudonuevo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amigos de Villa Luro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../img/Escudos/Escudonuevo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>  
-    <header>
-        <h1>Los Amigos de Villa Luro</h1>
-        <h2>Asociación Vecinal de Fomento</h2>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="../index.html" class="active">Inicio</a></li>
-            <li><a href="Actividades.html" >Actividades</a></li>
-          <!-- <li><a href="pages/Nuestrahistoria.html">Nuestra Historia</a></li> -->
-          <li><a href="Contacto.html" class="active">Contacto</a></li>
+<body>
+  <header>
+    <h1>Los Amigos de Villa Luro</h1>
+    <h2>Asociación Vecinal de Fomento</h2>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html" class="active">Inicio</a></li>
+      <li><a href="Actividades.html">Actividades</a></li>
+      <li><a href="Contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="contacto">
+    <h2 class="titulo-contacto">Contáctanos</h2>
+
+    <div class="contenido-contacto">
+      <form class="formulario-contacto" action="https://formsubmit.co/info@amigosdevillaluro.com.ar" method="POST">
+        <label for="email">Tu correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="info@amigosdevillaluro.com.ar" required>
+
+        <label for="mensaje">Tu consulta</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <input type="hidden" name="_next" value="https://google.com"> <!-- Cambiar si querés una página de gracias -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <div class="info-contacto">
+        <h3>Datos de contacto</h3>
+        <p><strong>Dirección:</strong> Cnel. Ramón L. Falcón 5176, C1407 Cdad. Autónoma de Buenos Aires</p>
+        <p><strong>WhatsApp:</strong> +54 9 11 3485-5719</p>
+        <p><strong>Telefono:</strong> +54 9 11 4683-4740</p>
+        <p><strong>Email:</strong> info@amigosdevillaluro.com.ar</p>
+      </div>
+
+      <div class="info-contacto">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6359195801265!2d-58.50499681170238!3d-34.63863978956386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9b101010d97%3A0x1e0f01fd47a2b470!2sAsociaci%C3%B3n%20Vecinal%20de%20Fomento%20Los%20Amigos%20de%20Villa%20Luro!5e0!3m2!1ses-419!2sar!4v1746490399040!5m2!1ses-419!2sar" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-separador"></div>
+
+    <div class="footer-contenido">
+      <section class="sect-nav">
+        <h4>Navegación</h4>
+        <ul class="ul-nav">
+          <li class="li-nav"><a href="index.html">Inicio</a></li>
+          <li class="li-nav"><a href="pages/Actividades.html">Actividades</a></li>
+          <li class="li-nav"><a href="pages/Contacto.html">Contacto</a></li>
         </ul>
-    </nav>
-    <section class="contacto">
-        <h2 class="titulo-contacto">Contáctanos</h2>
-      
-        <div class="contenido-contacto">
-          <form class="formulario-contacto">
-            <label for="email">Tu correo electrónico</label>
-            <input type="email" id="email" name="Amigos de Villa Luro" placeholder="info@amigosdevillaluro.com.ar" required>
-      
-            <label for="mensaje">Tu consulta</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-      
-            <button type="submit">Enviar mensaje</button>
-          </form>
-      
-          <div class="info-contacto">
-            <h3>Datos de contacto</h3>
-            <p><strong>Dirección:</strong> Cnel. Ramón L. Falcón 5176, C1407 Cdad. Autónoma de Buenos Aires</p>
-            <p><strong>Teléfono:</strong> +54 9 11 3485-5719</p>
-            <p><strong>Email:</strong> contacto@clubdeportivo.com</p>
-          </div>
-          <div class="info-contacto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6359195801265!2d-58.50499681170238!3d-34.63863978956386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9b101010d97%3A0x1e0f01fd47a2b470!2sAsociaci%C3%B3n%20Vecinal%20de%20Fomento%20Los%20Amigos%20de%20Villa%20Luro!5e0!3m2!1ses-419!2sar!4v1746490399040!5m2!1ses-419!2sar" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-        
       </section>
-      <footer>
-        <div class="footer-separador"></div>
-      
-        <div class="footer-contenido">
-          <section class="sect-nav">
-            <h4>Navegación</h4>
-            <ul class="ul-nav">
-              <li class="li-nav"><a href="index.html">Inicio</a></li>
-              <li class="li-nav"><a href="pages/Actividades.html">Actividades</a></li>
-              <li class="li-nav"><a href="pages/Contacto.html">Contacto</a></li>
-            </ul>
-          </section>
-      
-          <section class="sect-redes">
-            <h4>Redes Sociales</h4>
-            <div class="icons-foo"> 
-                <a href="https://wa.me/5491134855719" target="_blank" aria-label="WhatsApp">
-                  <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 30px;"></i>
-                </a>
-                <a href="https://www.instagram.com/asocamigosdevillaluro/?hl=es" target="_blank" aria-label="Instagram">
-                  <i class="fa-brands fa-instagram" style="color: #C13584; font-size: 30px;"></i>
-                </a>
-                <a href="https://www.facebook.com/AmigosDeVillaLuro/?locale=es_LA" target="_blank" aria-label="Facebook">
-                  <i class="fa-brands fa-facebook" style="color: #4267B2; font-size: 30px;"></i>
-                </a>
-              </div>
-              
-          </section>
-      
-          <section class="sect-info">
-            <h4>Contacto</h4>
-            <p>Cnel. Ramón L. Falcón 5176, C1407 Cdad. Autónoma de Buenos Aires</p>
-            <p>+54 9 11 3485-5719</p>
-            <p>contacto@clubdeportivo.com</p>
-          </section>
+
+      <section class="sect-redes">
+        <h4>Redes Sociales</h4>
+        <div class="icons-foo">
+          <a href="https://wa.me/5491134855719" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="color: #8a8a8a; font-size: 30px;"></i>
+          </a>
+          <a href="https://www.instagram.com/asocamigosdevillaluro/?hl=es" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" style="color: #8a8a8a; font-size: 30px;"></i>
+          </a>
+          <a href="https://www.facebook.com/AmigosDeVillaLuro/?locale=es_LA" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook" style="color: #8a8a8a; font-size: 30px;"></i>
+          </a>
         </div>
-      
-        <div class="footer-copy">
-          <p>&copy; 2025 Club Deportivo. Todos los derechos reservados.</p>
-          <p>Pagina hecha por Thiago Vitelli</p>
-        </div>
-      </footer>
-         
-</body>  
+      </section>
+
+      <section class="sect-info">
+        <h4>Contacto</h4>
+        <p>Cnel. Ramón L. Falcón 5176, C1407 Cdad. Autónoma de Buenos Aires</p>
+        <p>+54 9 11 3485-5719</p>
+        <p>contacto@clubdeportivo.com</p>
+      </section>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2025 Club Deportivo. Todos los derechos reservados.</p>
+      <p>Pagina hecha por Thiago Vitelli</p>
+    </div>
+  </footer>
+</body>
 </html>
