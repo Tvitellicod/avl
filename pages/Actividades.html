@@ -243,16 +243,23 @@
       
       
       <script>
-        const wppPorActividad = {
-          "NATACIÓN": "5491157690072",
-          "STRETCHING": "5491122472689",
-          "FUNCIONAL": "5491122472689",
-          "ZUMBA": "5491122472689",
-          "GIMNASIO": "5491122472689",
-          "PILATES": "5491122472689"
-        };
+        const actividadesGrupo1 = [
+          "FUTSAL MASCULINO",
+          "ESCUELITA DE FUTBOL",
+          "FEFI",
+          "PATIN",
+          "GIMNASIA ARTISTICA",
+          "BASQUET",
+          "FUTSAL FEMENINO",
+          "VOLEY",
+          "FUTSAL PROMOCIONAL",
+          "TAEKWONDO",
+          "FAFI"
+        ];
+        const actividadesGrupo2 = ["NATACION"];
+        const actividadesGrupo3 = ["STRETCHING", "FUNCIONAL", "ZUMBA", "GIMNASIO", "PILATES"];
       
-        function normalizarTexto(texto) {
+        function normalizar(texto) {
           return texto
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
@@ -263,18 +270,27 @@
         document.querySelectorAll('.actividad').forEach(div => {
           div.addEventListener('click', () => {
             const overlay = div.querySelector('.overlay');
-            const deporteCrudo = overlay ? overlay.innerText : '';
-            const clave = normalizarTexto(deporteCrudo);
-            const numero = wppPorActividad[clave] || '5491134855719';
-            const mensaje = `Hola! Quisiera más información sobre ${deporteCrudo}.`;
+            const nombreActividad = overlay ? overlay.innerText : '';
+            const clave = normalizar(nombreActividad);
+      
+            let numero;
+            if (actividadesGrupo2.includes(clave)) {
+              numero = '5491157690072'; // natación
+            } else if (actividadesGrupo3.includes(clave)) {
+              numero = '5491122472689'; // stretching, funcional, etc.
+            } else {
+              numero = '5491134855719'; // grupo general
+            }
+      
+            const mensaje = `Hola! Quisiera más información sobre ${nombreActividad}.`;
             const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-            window.location.href = url; // <== redirige directamente
+      
+            setTimeout(() => {
+              window.open(url, '_blank');
+            }, 100);
           });
         });
       </script>
-      
-      
-      
-      
+            
 </body>
 </html>
