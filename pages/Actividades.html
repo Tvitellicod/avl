@@ -118,7 +118,7 @@
           <div class="overlay">FUTSAL MASCULINO</div>
         </div>
         <div class="actividad" data-deporte="NATACION">
-          <img src="../img/pileta-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.29_a33f9523.jpg" alt="NATACION">
+          <img src="../img/pileta-actividad/Imagen de WhatsApp 2025-05-04 a las 21.39.29_a33f9523.jpg" alt="NATACIÓN">
           <div class="overlay">NATACIÓN</div>
         </div>
         <div class="actividad" data-deporte="ESCUELITA DE FUTBOL">
@@ -142,16 +142,16 @@
             <div class="overlay">FUNCIONAL</div>
           </div>
         <div class="actividad" data-deporte="PATIN">
-          <img src="../img/Patinartistico-actividad/DSCPDC_0001_BURST20181216222541321.JPG" alt="PATIN">
+          <img src="../img/Patinartistico-actividad/DSCPDC_0001_BURST20181216222541321.JPG" alt="PATÍN">
           <div class="overlay">PATÍN</div>
         </div>
 
         <div class="actividad" data-deporte="GIMNASIA ARTISTICA">
-          <img src="../img/Gimnasiaartistica-actividad/IMG-20250305-WA0030.jpg" alt="GIMNASIA ARTISTICA">
+          <img src="../img/Gimnasiaartistica-actividad/IMG-20250305-WA0030.jpg" alt="GIMNASIA ARTÍSTICA">
           <div class="overlay">GIMNASIA ARTÍSTICA</div>
         </div>
         <div class="actividad" data-deporte="BASQUET">
-          <img src="../img/Basquet-actividad/IMG-20250308-WA0006.jpg" alt="BASQUET">
+          <img src="../img/Basquet-actividad/IMG-20250308-WA0006.jpg" alt="BÁSQUET">
           <div class="overlay">BÁSQUET</div>
         </div>
         <div class="actividad" data-deporte="FUTSAL FEMENINO">
@@ -159,7 +159,7 @@
             <div class="overlay">FUTSAL FEMENINO</div>
           </div>
         <div class="actividad" data-deporte="VOLEY">
-          <img src="../img/Voley-actividad/IMG-20250403-WA0008.jpg" alt="VOLEY">
+          <img src="../img/Voley-actividad/IMG-20250403-WA0008.jpg" alt="VÓLEY">
           <div class="overlay">VÓLEY</div>
         </div>
         <!-- <div class="actividad" data-deporte="NATACION TERAPÉUTICA">
@@ -243,15 +243,38 @@
       
       
       <script>
+        const wppPorActividad = {
+          "NATACIÓN": "5491157690072",
+          "STRETCHING": "5491122472689",
+          "FUNCIONAL": "5491122472689",
+          "ZUMBA": "5491122472689",
+          "GIMNASIO": "5491122472689",
+          "PILATES": "5491122472689"
+        };
+      
+        function normalizarTexto(texto) {
+          return texto
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toUpperCase()
+            .trim();
+        }
+      
         document.querySelectorAll('.actividad').forEach(div => {
           div.addEventListener('click', () => {
-            const deporte = div.getAttribute('data-deporte');
-            const mensaje = `Hola! Quisiera mas información sobre ${deporte}.`;
-            const url = `https://wa.me/5491134855719?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
+            const overlay = div.querySelector('.overlay');
+            const deporteCrudo = overlay ? overlay.innerText : '';
+            const clave = normalizarTexto(deporteCrudo);
+            const numero = wppPorActividad[clave] || '5491134855719';
+            const mensaje = `Hola! Quisiera más información sobre ${deporteCrudo}.`;
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.location.href = url; // <== redirige directamente
           });
         });
       </script>
+      
+      
+      
       
 </body>
 </html>
